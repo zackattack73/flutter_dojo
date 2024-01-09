@@ -16,11 +16,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home:
-      //BrickScreen()
+      BrickScreen()
       //BrickStateScreen()
       //BricksListScreen()
       //BricksListStateScreen()
-      FutureBricksList()
+      //FutureBricksList()
       );
   }
 }
