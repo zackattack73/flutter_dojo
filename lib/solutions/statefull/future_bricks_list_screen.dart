@@ -37,7 +37,7 @@ class _FutureBricksList extends State<FutureBricksList> {
                                 borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                               ),
                               child: Row(children: [
-                                Padding(padding: const EdgeInsets.all(2), child: Image.network(currentBrick.getImgUrl(), width: 150)),
+                                Padding(padding: const EdgeInsets.all(2), child: Image.asset(currentBrick.getImgAssetName(), width: 150)),
                                 Flexible(
                                     child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,9 @@ class _FutureBricksList extends State<FutureBricksList> {
                               padding: const EdgeInsets.all(10),
                               child: IconButton(
                                 onPressed: () {
+                                  setState(() {
                                     currentBrick.changeFavorite();
+                                  });
                                 },
                                 icon: Icon(
                                   currentBrick.favorite ? Icons.favorite : Icons.favorite_border,

@@ -12,7 +12,7 @@ class Brick {
     category = json['category'];
   }
 
-  String getImgUrl() => "https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/$id.jpg";
+  String getImgAssetName() => "assets/$id.jpg";
 
   changeFavorite() => favorite = !favorite;
 }

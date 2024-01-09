@@ -32,7 +32,7 @@ class _BrickStateScreen extends State<BrickStateScreen> {
             ),
             child: Row(
               children: [
-                Padding(padding: const EdgeInsets.all(2), child: Image.network(currentBrick.getImgUrl(), width: 150)),
+                Padding(padding: const EdgeInsets.all(2), child: Image.asset(currentBrick.getImgAssetName(), width: 150)),
                 Flexible(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
