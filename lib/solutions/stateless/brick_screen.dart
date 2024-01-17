@@ -14,24 +14,28 @@ class BrickScreen extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-              margin: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                border: Border.all(width: 3.0),
-                borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-              ),
-              child: Row(children: [
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              border: Border.all(width: 3.0),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+            ),
+            child: Row(
+              children: [
                 Padding(padding: const EdgeInsets.all(2), child: Image.asset(currentBrick.getImgAssetName(), width: 150)),
                 Flexible(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(currentBrick.name.toString(), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                    Text(currentBrick.id.toString(), style: const TextStyle(fontStyle: FontStyle.italic)),
-                    Text(currentBrick.category.toString())
-                  ],
-                ))
-              ])),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(currentBrick.name.toString(), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                      Text(currentBrick.id.toString(), style: const TextStyle(fontStyle: FontStyle.italic)),
+                      Text(currentBrick.category.toString())
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
           Align(
             alignment: Alignment.topRight,
             child: Padding(
